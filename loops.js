@@ -21,8 +21,11 @@ var person = {
 // birthDate if the birth year is an odd number.
 for (var traits in person) {
     if (traits == "birthDate") {}
+    // slice off the last four digits and make them a number instead of a string
     let birthYear = parseInt(person["birthDate"].slice(-4));
+    // check to see if they're even
     if (birthYear % 2 != 0){
+        // print!
         console.log(birthYear);
     }
 }
